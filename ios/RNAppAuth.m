@@ -1,5 +1,7 @@
 
 #import "RNAppAuth.h"
+#import "RNAppAuthDelegate.h"
+
 #import <AppAuth/AppAuth.h>
 #import <React/RCTLog.h>
 #import <React/RCTConvert.h>
@@ -144,7 +146,7 @@ RCT_REMAP_METHOD(refresh,
     
     
     // performs authentication request
-    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    RNAppAuthDelegate *appDelegate = (RNAppAuthDelegate *)[UIApplication sharedApplication].delegate;
     
     appDelegate.currentAuthorizationFlow =
     [OIDAuthState authStateByPresentingAuthorizationRequest:request
