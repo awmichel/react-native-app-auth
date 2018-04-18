@@ -3,7 +3,6 @@
 #import <AppAuth/AppAuth.h>
 #import <React/RCTLog.h>
 #import <React/RCTConvert.h>
-#import "AppDelegate.h"
 
 @implementation RNAppAuth
 
